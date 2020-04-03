@@ -4,7 +4,7 @@
  * @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
  * @Group              : 
  * @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
- * @Last Modified On   : 1/4/2020, 12:13:52 am
+ * @Last Modified On   : 3/4/2020, 12:49:15 pm
  * @Modification Log   : 
  * Ver       Date            Author      		    Modification
  * 1.0    3/7/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
@@ -14,6 +14,10 @@ public class SortingList
 {
     /**
      * printList prints the element and put them in the list
+     * @actions
+	 * - Check if size of list >0.
+	 * - If list size is >0, sort the list.
+	 * - For all other scenario, return empty list.
      * @param  count Number of elements you want to put in an array
      * @return      myList returns the List
      */
@@ -52,6 +56,11 @@ public class SortingList
 
     /**
      * printAscendingList used to sort the List in Ascending order
+     * @actions
+	 * - Check if size of list >0.
+	 * - If list size is >0, sort the list.
+	 * - For all other scenario, return empty list.
+	 *
      * @param  integerList integerList is the List to be sorted
      * @return        returns the given List in ascending order
      */
@@ -81,6 +90,11 @@ public class SortingList
 
     /**
      * printDescendingList program sorts the list in descending order
+     * @actions
+	 * - Check if size of list >0.
+	 * - If list size is >0, sort the list.
+	 * - For all other scenario, return empty list.
+	 *
      * @param  integerList integerList is the List to be sorted
      * @return        return the given list in descending order
      */
@@ -108,6 +122,12 @@ public class SortingList
 
     /**
      * printMax prints maximum number from the list
+     * 
+	 * @actions
+	 * - Check if size of list >0.
+	 * - If list size is >0, find Maximum number.
+	 * - For all other scenario, return 0.
+	 *
      * @param  myList myList is the List passed as parameter
      * @return        Max variable returns the maximum number from the list
      */
@@ -143,6 +163,10 @@ public class SortingList
     
     /**
      * printMin prints Minimum number from the list
+	 * @actions
+	 * - Check if size of list >0.
+	 * - If list size is >0, find minimum number.
+	 * - For all other scenario, return 0.
      * @param  integerList integerList is the List passed as parameter
      * @return        Min variable returns the Minimum number from the list
      */
@@ -174,11 +198,19 @@ public class SortingList
 
 
 
-    /**
-     * integprintOccurence description
-     * @param  myList List of integer passed as a parameter
-     * @return        returns the map of key and it's occurence
-     */
+   /**
+	 * This method is used to find occurence of each number in the integer list.
+	 *
+	 * @actions
+	 * - Check if size of list >0.
+	 * - If list size is >0, find occurences of each number.
+	 * - For all other scenario, return empty map.
+	 *
+	 * @param myList - List of integers.
+
+	 *
+	 * @return - map of occurences
+	 **/
     public static map<integer,integer> integprintOccurence(List<Integer> myList)
     {
         Map<Integer,Integer> myMap = new Map<Integer,Integer>();
@@ -205,13 +237,20 @@ public class SortingList
     //Done
 
 
-    /**
-     * This Method calculates and returns the simple interest
-     * @param  principle principle amount
-     * @param  rate      interest rate per year
-     * @param  year      Number of years
-     * @return           returns the Simple Interest
-     */
+/**
+	 * This method is used to find occurence of each number in the integer list.
+	 *
+	 * @actions
+	 * - Check the parameters principle,year,amount are >0
+	 * - If Value of parameters  >0, Calculate the simple Interest .
+	 * - For all other scenario, return 0.
+	 *
+	 * @param principle - decimal - priciple amount.
+	 * @param  year- decimal- number of years
+	 *@param rate- decimal intrest rate
+	 * @return - Simple Interest in Decimal
+	 **/
+	//this method receive parameters and calculates simple interest
     public static Decimal simpleInterest(Decimal principle,Decimal rate,Decimal year)
     {
         if(principle>0 && rate>0 && year>0){                        //Checks if all the passed parameters are positive 
@@ -229,6 +268,11 @@ public class SortingList
  
     /**
      * acccountTraditionalSearch Searches All the account present in the org and displays it Using Traditional For Loop
+     * 
+	 * @actions
+	 * -This Method fetch account record upto limit and display using Traditional For Loop.
+	 *
+	 * @return - Size Of Record List
      */
     public static void acccountTraditionalSearch()
     {
@@ -249,6 +293,10 @@ public class SortingList
     
     /**
      * accountAdvanceSearch Methods displays all the accounts present in the org using Advance For Loop
+     * @actions
+	 * -This Method fetch account record upto limit and display using Advance for Loop.
+	 *
+	 * @return - Size Of Record List
      */
     public static void accountAdvanceSearch(){
         for(Account act : [SELECT Id
@@ -266,6 +314,10 @@ public class SortingList
     
     /**
      * printAccountsUsingWhileLoop Methods Prints All the accounts present in the org
+     * @actions
+	 * -This Method fetch account record upto limit and display using While Loop.
+	 *
+	 * @return - Size Of Record List
      */
     public static void printAccountsUsingWhileLoop()
     {
